@@ -1,0 +1,44 @@
+
+@media only screen and (min-device-width:1000px) and (max-device-width:1500px)  { /* smartphones, Android phones, landscape iPhone */
+
+  
+    #img {
+        position: absolute;
+        left: 46%;
+        top: 25%;
+        width: 55%;
+    }
+
+
+    .button {
+        position: absolute;
+        right: -828px;
+        bottom: -257px;
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 22px;
+    }
+    .buttons {
+        position: absolute;
+        top: 799px;
+        left: 801px;
+        font-size: xx-large;
+    }
+    .right{
+    font-family: Arial;
+    font-size: x-large;
+    position: absolute;
+    right: -48%;
+}
+    
+    
+   
+}

@@ -1,0 +1,16 @@
+
+@media only screen and (min-device-width:700px) and (max-device-width:2700px)  { /* smartphones, Android phones, landscape iPhone */
+
+  
+    #img {
+        width: 680px;
+        height: 528px;
+        position: fixed;
+        left: 35%;
+        top: 17%;
+    }
+    
+    
+    
+   
+}
