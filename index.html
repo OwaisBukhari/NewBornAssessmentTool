@@ -29,7 +29,7 @@
 
             r.style.setProperty('--p', a);
             
-            document.getElementById("img").style="zoom:var(--p)"
+           // document.getElementById("img").style="zoom:var(--p)"
         }
 
        
@@ -41,7 +41,7 @@
 
             r.style.setProperty('--p', a);
             
-            document.getElementById("img").style="zoom:var(--p)"
+          //  document.getElementById("img").style="zoom:var(--p)"
         }
     
 
@@ -49,25 +49,14 @@
 </script>
 
 <style>
-    :root{
-        --p:10;
-    }
+  
 
 
-    .zoomin{
-        font-size: 50px;
-    }
-    .zoomout{
 
-        font-size: 50px;
-    }
-    .zoom{
-    transition: transform .2s;
-    }
+#image{
+    zoom:var(--p)
+}
 
-    .zoom:hover{
-    transform: scale(1.5);
-    }
 </style>
 
 
@@ -114,7 +103,7 @@
                         //xhr.send();
 
                         // Or inserted into an <img> element
-                        const img = document.getElementById('img');
+                        const img = document.getElementById('image');
                         img.setAttribute('src', url);
                         document.getElementById('idnum').value = result.items[p].name;
                     //console.log(ref.child('images').log())
@@ -241,7 +230,7 @@
                         //xhr.send();
 
                         // Or inserted into an <img> element
-                        const img = document.getElementById('img');
+                        const img = document.getElementById('image');
                         img.setAttribute('src', url);
                         document.getElementById('idnum').value = result.items[p].name;
                     //console.log(ref.child('images').log())
@@ -756,23 +745,43 @@
                     </form>   
                
 
-               
+                    <script type="text/javascript" src='ImageMove.js'></script>
+                    <script type="text/javascript">
+                    var imgMove = new ImageMove("container", "image");
+                    imgMove.addPanEvents();
+                    </script>           
 
    
+    <div id='container' style='width: 700px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    top: 11rem;
+    right: -33rem;'>
+        <img class="imgg" src="show.jpg" style='position: relative;' id="image">
+     </div>    
+     
+     
 
 
-    <div class="centre">
+  <!--
+      <div class="centre">
         <img class="zoom" id="img" src="show.jpg" alt="Paris">
+        </div>
 
 
-    </div>
-
-    <!--<div class="zoom-div">
+        
+    <div class="zoom-div">
             
     <i onclick="zoomin()"  class="icon-zoom-in zoomin"></i>
     <i onclick="zoomout()" class="icon-zoom-out zoomout"></i> 
 
-    </div>  --->
+  --> 
+
+    
+
+
+    </div> 
 
     <div class="buttons">
         <a href="#" class="previous round" onclick="uthalo2()" ; >&#8249;</a>
