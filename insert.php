@@ -55,13 +55,18 @@
     $R17 = $_POST['R17'];
 
     
+$current_time = time();
+$time=date('Y-m-d g:ia', $current_time) ;
+//echo $time;
+
+    
 
 
 
     //$email = $_POST['email'];
     //$pata = $_POST['pata'];
 
-    $sql= "INSERT INTO  newborndata (HeadShape,HeadSize,HeadSwelling,EyeLeft,EyeRight,EarRight,EarLeft,Nose,MouthLips,MouthChin,OverallFacialAppearance,FacialFeaturesRelatingTo,Neck,Chest,RightUpperLimb,LeftUpperLimb,RightHand,LeftHand,Abdomen,Umbilicus,Penis,Scrotum,FemaleGenitalia,Legsposition,RightLowerLimb,LeftLowerLimb,RightFoot,LeftFoot,Back,Color,id) VALUES ('$headshape','$headsize','$headswelling','$eyeleft','$eyeright','$earright','$earleft','$nose','$mouthlips','$mouthchin','$overallfacialappearance','$facialfeaturesrelatingto','$neck','$R1','$R2','$R3','$R4','$R5','$R6','$R7','$R8','$R9','$R10','$R11','$R12','$R13','$R14','$R15','$R16','$R17','$id')";                                                        
+    $sql= "INSERT INTO  newborndata (HeadShape,HeadSize,HeadSwelling,EyeLeft,EyeRight,EarRight,EarLeft,Nose,MouthLips,MouthChin,OverallFacialAppearance,FacialFeaturesRelatingTo,Neck,Chest,RightUpperLimb,LeftUpperLimb,RightHand,LeftHand,Abdomen,Umbilicus,Penis,Scrotum,FemaleGenitalia,Legsposition,RightLowerLimb,LeftLowerLimb,RightFoot,LeftFoot,Back,Color,id,timee) VALUES ('$headshape','$headsize','$headswelling','$eyeleft','$eyeright','$earright','$earleft','$nose','$mouthlips','$mouthchin','$overallfacialappearance','$facialfeaturesrelatingto','$neck','$R1','$R2','$R3','$R4','$R5','$R6','$R7','$R8','$R9','$R10','$R11','$R12','$R13','$R14','$R15','$R16','$R17','$id','$time')";                                                        
 
     IF(!mysqli_query($con,$sql))
     {
@@ -75,14 +80,15 @@
     {
 
         
+        header("refresh:0.5;index.php");
 
-        echo 'inserted';
+      //  echo 'inserted';
+
 
 
     }
 
-    header("refresh:5;index.html");
-
+   
 
 
 

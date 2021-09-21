@@ -78,3 +78,9 @@ a:hover {
 #image{
   zoom:var(--p)
 }
+
+#count{
+
+
+  float:right;
+}
